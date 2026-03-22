@@ -1,3 +1,4 @@
+using Source.Code.Gameplay.Blocks.Signals;
 using Zenject;
 
 namespace Source.Code.Infrastructure.Installers.ProjectScope
@@ -6,6 +7,7 @@ namespace Source.Code.Infrastructure.Installers.ProjectScope
     {
         public override void InstallBindings()
         {
+            Container.DeclareSignal<BlockSpawnedSignal>();
         }
     }
 }
